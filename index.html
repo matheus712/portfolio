@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Profissional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet"> <!-- Fonte Nixie One adicionada -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <h1>Portfólio</h1>
+        <nav>
+            <a href="#about">Sobre Mim</a>
+            <a href="#projects">Projetos</a>
+            <a href="#contact">Contato</a>
+        </nav>
+
+    <main>
+        <section id="about">
+            <h2>Sobre Mim</h2>
+            <p>Sou um profissional apaixonado por tecnologia, desenvolvimento web e design. Sempre busco aprender novas habilidades e criar soluções criativas para desafios.</p>
+        </section>
+
+        <!-- Seção de Projetos com sombra -->
+         <
+        <section id="projects">
+            <h2>Projetos</h2>
+            <div class="projects">
+                <div class="project-card">               
+                    <h3>Projeto 1</h3>
+                    <p>Descrição breve do projeto. Destaque as principais tecnologias usadas.</p>
+                    <div class="button-container">
+                        <a href="file:///C:/Users/Leandra/Desktop/Projeto/index.html" class="grow-button" target="_blank" style="text-decoration: none;">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="project-card">                   
+                    <h3>Projeto 2</h3>
+                    <p>Descrição breve do projeto. Destaque as principais tecnologias usadas.</p>
+                    <div class="button-container">
+                        <a href="file:///C:/Users/Leandra/Desktop/Projeto/index.html" class="grow-button" target="_blank" style="text-decoration: none;">Saiba Mais</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Projeto 3</h3>
+                    <p>Descrição breve do projeto. Destaque as principais tecnologias usadas.</p>
+                    <div class="button-container">
+                        <a href="file:///C:/Users/Leandra/Desktop/Projeto/index.html" class="grow-button" target="_blank" style="text-decoration: none;">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contato</h2>
+            <p>Entre em contato comigo pelo email: <a href="matheuscainan0704@gmail.com">matheuscainan0704@gmail.com</a></p>
+            <!-- Ícone do Instagram com link para seu perfil -->
+            <p>Siga-me no Instagram:</p>
+            <a href="https://www.instagram.com/_matheuscnz" target="_blank">
+                <img src="https://img.freepik.com/vetores-gratis/instagram-logo_1199-122.jpg?semt=ais_hybrid" alt="Instagram" style="width: 40px; height: 40px;">
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Meu Nome. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.grow-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.parentElement.parentElement;
+                card.classList.toggle('grow');
+            });
+        });
+    </script>
+     <script src="script.js"></script>
+</body>
+</html>
