@@ -5,23 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfólio | Matheus Cainã</title>
 
-  <!-- CONFIGURAÇÃO DARK MODE + APLICAÇÃO ANTES DE RENDERIZAR -->
+  <!-- Configuração Dark Mode + aplicação antes de renderizar -->
   <script>
     tailwind.config = {
       darkMode: 'class'
     }
 
-    // Aplica o tema salvo ANTES da página carregar
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark' || !savedTheme) {
       document.documentElement.classList.add('dark');
     }
   </script>
 
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet" />
 
   <style>
@@ -30,19 +27,6 @@
       scroll-behavior: smooth;
       overflow-x: hidden;
       margin: 0;
-      transition: background 0.4s, color 0.4s;
-    }
-
-    /* Light */
-    body {
-      background: #ffffff;
-      color: #111827;
-    }
-
-    /* Dark */
-    .dark body {
-      background: #0a0f14;
-      color: #d6ffe4;
     }
 
     .stars {
@@ -74,11 +58,6 @@
 
     .grow-card {
       transition: 0.3s ease-in-out;
-      background: #f3f4f6;
-    }
-
-    .dark .grow-card {
-      background: #0f1a21;
     }
 
     .grow-card:hover {
@@ -87,7 +66,7 @@
   </style>
 </head>
 
-<body>
+<body class="bg-white text-gray-900 dark:bg-[#0a0f14] dark:text-[#d6ffe4] transition-colors duration-300">
 
   <div class="stars" id="stars"></div>
 
@@ -111,6 +90,7 @@
   </header>
 
   <main class="container mx-auto px-4 py-8">
+
     <section id="about" class="mb-12">
       <h2 class="text-xl font-semibold mb-2">Sobre Mim</h2>
       <p>
@@ -123,9 +103,9 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-        <div class="shadow-md rounded-xl p-4 grow-card">
+        <div class="shadow-md rounded-xl p-4 grow-card bg-gray-100 dark:bg-[#0f1a21]">
           <h3 class="text-lg font-bold">Simulador de controle de Finanças</h3>
-          <p class="text-sm text-gray-500 mb-4">
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
             Aplicativo para controlar finanças pessoais.
           </p>
           <a href="https://github.com/matheus712" target="_blank"
@@ -134,9 +114,9 @@
           </a>
         </div>
 
-        <div class="shadow-md rounded-xl p-4 grow-card">
+        <div class="shadow-md rounded-xl p-4 grow-card bg-gray-100 dark:bg-[#0f1a21]">
           <h3 class="text-lg font-bold">To-Do List</h3>
-          <p class="text-sm text-gray-500 mb-4">
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
             Lista de tarefas com adicionar, remover e marcar como feito.
           </p>
           <a href="https://matheus712.github.io/to-do-list/" target="_blank"
@@ -145,9 +125,9 @@
           </a>
         </div>
 
-        <div class="shadow-md rounded-xl p-4 grow-card">
+        <div class="shadow-md rounded-xl p-4 grow-card bg-gray-100 dark:bg-[#0f1a21]">
           <h3 class="text-lg font-bold">Jogo da Velha</h3>
-          <p class="text-sm text-gray-500 mb-4">
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
             Jogo interativo para dois jogadores.
           </p>
           <a href="#"
@@ -168,6 +148,7 @@
         </a>
       </p>
     </section>
+
   </main>
 
   <footer class="text-center py-4 mt-8 border-t">
