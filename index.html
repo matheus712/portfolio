@@ -4,90 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfólio | Matheus Cainã</title>
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet" />
 
-  <style>
-    /* Base */
-    body {
-      font-family: 'Nixie One', cursive;
-      scroll-behavior: smooth;
-      background: #0a0f14;
-      color: #d6ffe4;
-      overflow-x: hidden;
-      margin: 0;
-    }
-
-    /* Estrelas */
-    .stars {
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      z-index: -1;
-      overflow: hidden;
-    }
-
-    .star {
-      position: absolute;
-      width: 3px;
-      height: 3px;
-      background: #8fc7a3;
-      border-radius: 50%;
-      opacity: 0;
-      animation: blink 2s infinite ease-in-out;
-    }
-
-    @keyframes blink {
-      0% { opacity: 0; }
-      50% { opacity: 1; }
-      100% { opacity: 0; }
-    }
-
-    /* Cards */
-    .grow-card {
-      transition: 0.3s ease-in-out;
-      background: #0f1a21;
-      border: 1px solid #1b2a33;
-    }
-
-    .grow-card:hover {
-      transform: scale(1.05);
-      border-color: #3c6e71;
-      box-shadow: 0 0 12px #244e52;
-    }
-
-    header, footer {
-      background: #0f1a21 !important;
-      border-bottom: 1px solid #1c2b33;
-    }
-
-    nav a {
-      color: #9ac7b1;
-      transition: 0.2s;
-    }
-
-    nav a:hover {
-      color: #c9ffe4;
-      text-shadow: 0 0 10px #7ef2b4;
-    }
-
-    /* Responsiveness small tweaks */
-    @media (max-width: 640px) {
-      .container { padding-left: 12px; padding-right: 12px; }
-    }
-  </style>
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
-  <!-- Stars layer -->
+  <!-- Stars -->
   <div class="stars" id="stars" aria-hidden="true"></div>
 
   <header class="shadow-md p-5 sticky top-0 z-10 bg-opacity-80 backdrop-blur-lg">
     <div class="container mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold text-[#c9ffe4]">Portfólio</h1>
+
       <div class="flex items-center space-x-4">
         <nav class="space-x-4">
           <a href="#about">Sobre Mim</a>
@@ -106,29 +42,40 @@
 
     <section id="about" class="mb-12">
       <h2 class="text-xl font-semibold mb-2 text-[#c9ffe4]">Sobre Mim</h2>
-      <p class="text-gray-300">Meu nome é Matheus Cainã. Sou da área de desenvolvimento front-end e fiz curso técnico de Desenvolvimento de Sistemas e Inteligência Artificial.</p>
+      <p class="text-gray-300">
+        Meu nome é Matheus Cainã. Sou da área de desenvolvimento front-end e fiz curso técnico de Desenvolvimento de Sistemas e Inteligência Artificial.
+      </p>
     </section>
 
     <section id="projects" class="mb-12">
       <h2 class="text-xl font-semibold mb-4 text-[#c9ffe4]">Projetos</h2>
+
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
         <div class="shadow-md rounded-xl p-4 grow-card">
           <h3 class="text-lg font-bold text-[#c9ffe4]">Simulador de controle de Finanças</h3>
           <p class="text-sm text-gray-400 mb-4">Aplicativo para controlar finanças pessoais.</p>
-          <a href="https://finan-as-lake.vercel.app/" target="_blank" class="inline-block bg-[#3c6e71] text-white px-4 py-2 rounded hover:bg-[#2e5255] transition">Saiba Mais</a>
+          <a href="https://github.com/matheus712" target="_blank"
+            class="inline-block bg-[#3c6e71] text-white px-4 py-2 rounded hover:bg-[#2e5255] transition">
+            Saiba Mais
+          </a>
         </div>
 
         <div class="shadow-md rounded-xl p-4 grow-card">
           <h3 class="text-lg font-bold text-[#c9ffe4]">To-Do List</h3>
           <p class="text-sm text-gray-400 mb-4">Lista de tarefas com adicionar, remover e marcar como feito.</p>
-          <a href="https://matheus712.github.io/to-do-list/" target="_blank" class="inline-block bg-[#3c6e71] text-white px-4 py-2 rounded hover:bg-[#2e5255] transition">Saiba Mais</a>
+          <a href="https://matheus712.github.io/to-do-list/" target="_blank"
+            class="inline-block bg-[#3c6e71] text-white px-4 py-2 rounded hover:bg-[#2e5255] transition">
+            Saiba Mais
+          </a>
         </div>
 
         <div class="shadow-md rounded-xl p-4 grow-card">
           <h3 class="text-lg font-bold text-[#c9ffe4]">Jogo da Velha</h3>
           <p class="text-sm text-gray-400 mb-4">Jogo interativo para dois jogadores.</p>
-          <a href="#" class="inline-block bg-[#3c6e71] text-white px-4 py-2 rounded hover:bg-[#2e5255] transition">Saiba Mais</a>
+          <a href="#" class="inline-block bg-[#3c6e71] text-white px-4 py-2 rounded hover:bg-[#2e5255] transition">
+            Saiba Mais
+          </a>
         </div>
 
       </div>
@@ -136,7 +83,12 @@
 
     <section id="contact">
       <h2 class="text-xl font-semibold mb-2 text-[#c9ffe4]">Contato</h2>
-      <p>Email: <a href="mailto:matheuscainan0704@gmail.com" class="text-[#8fd8b8] hover:underline">matheuscainan0704@gmail.com</a></p>
+      <p>Email:
+        <a href="mailto:matheuscainan0704@gmail.com" class="text-[#8fd8b8] hover:underline">
+          matheuscainan0704@gmail.com
+        </a>
+      </p>
+
       <p class="mt-2">Redes Sociais:</p>
 
       <div class="flex space-x-4 mt-2">
@@ -152,57 +104,10 @@
   </main>
 
   <footer class="text-center py-4 mt-8 border-t border-gray-700">
-    <p class="text-gray-400">&copy; 2025 Matheus Cainã. Todos os direitos reservados.</p>
+    <p class="text-gray-400">&copy; 2025 Matheus Cainã.</p>
   </footer>
 
-  <script>
-    // Gerar estrelas apenas quando DOM pronto
-    document.addEventListener('DOMContentLoaded', () => {
-      const starsContainer = document.getElementById("stars");
-      if (starsContainer) {
-        for (let i = 0; i < 120; i++) {
-          const s = document.createElement("div");
-          s.classList.add("star");
-          s.style.top = Math.random() * 100 + "vh";
-          s.style.left = Math.random() * 100 + "vw";
-          s.style.animationDelay = (Math.random() * 2).toFixed(2) + "s";
-          s.style.transform = `scale(${(Math.random() * 1.2 + 0.4).toFixed(2)})`;
-          starsContainer.appendChild(s);
-        }
-      }
-
-      // Dark mode toggle (salva no localStorage)
-      const toggleBtn = document.getElementById('toggle-dark');
-      const html = document.documentElement;
-
-      function applyTheme(theme) {
-        if (theme === 'dark') {
-          html.classList.add('dark');
-          toggleBtn.textContent = '☀️';
-          toggleBtn.setAttribute('aria-pressed', 'true');
-        } else {
-          html.classList.remove('dark');
-          toggleBtn.textContent = '🌙';
-          toggleBtn.setAttribute('aria-pressed', 'false');
-        }
-      }
-
-      const savedTheme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      applyTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
-
-      if (toggleBtn) {
-        toggleBtn.addEventListener('click', () => {
-          const isNowDark = html.classList.toggle('dark');
-          const newTheme = isNowDark ? 'dark' : 'light';
-          localStorage.setItem('theme', newTheme);
-          applyTheme(newTheme);
-        });
-      }
-    });
-  </script>
+  <!-- JS externo -->
+  <script src="js/script.js"></script>
 </body>
 </html>
-
-
-
