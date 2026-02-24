@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matheus|Front-end</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Space Grotesk', 'sans-serif'] },
+          colors: {
+            primary: '#10b981', // Verde Esmeralda (IA/Tech)
+            darkBg: '#030712',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #030712;
+      color: #f3f4f6;
+      overflow-x: hidden;
+    }
+
+    /* Efeito de Malha ao fundo */
+    .mesh-bg {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      z-index: -1;
+      background: 
+        radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 10% 20%, rgba(6, 182, 212, 0.05) 0%, transparent 40%);
+    }
+
+    /* Cartão Glassmorphism */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .glass-card:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: #10b981;
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(16, 185, 129, 0.2);
+    }
+
+    /* Animação de digitação simples */
+    .typing::after {
+      content: '|';
+      animation: blink 1s infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #10b981, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <div class="mesh-bg"></div>
+
+  <nav class="fixed w-full z-50 top-0 bg-darkBg/60 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <span class="text-xl font-bold tracking-tighter">MC<span class="text-primary">.FRONT-END</span></span>
+      <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium text-gray-400">
+        <a href="#about" class="hover:text-primary transition">Sobre</a>
+        <a href="#projects" class="hover:text-primary transition">Lab</a>
+        <a href="#contact" class="hover:text-primary transition">Contato</a>
+      </div>
+      <a href="curriculo-matheus.pdf" download="Curriculo_Matheus_Caina" 
+   class="bg-primary/10 text-primary border border-primary/20 px-4 py-2 rounded-full text-xs font-bold hover:bg-primary hover:text-white transition inline-block">
+   CV_DOWNLOAD
+</a>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-6 pt-32">
+    
+    <section id="about" class="mb-32">
+      <div class="max-w-3xl">
+        <h2 class="text-primary font-medium mb-4 tracking-[0.3em] uppercase text-sm">Front-end & AI</h2>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          Criando o futuro através de <span class="gradient-text">linhas de código.</span>
+        </h1>
+        <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+          Olá, eu sou o <span class="text-white font-medium">Matheus Cainã</span>. Especialista em construir interfaces de alta performance e integrar inteligência artificial para solucionar problemas reais.
+        </p>
+        
+        <div class="flex flex-wrap gap-3 mb-12">
+          <span class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">React.js</span>
+          <span class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">Tailwind CSS</span>
+          <span class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">Python & AI</span>
+          <span class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">UI/UX Design</span>
+          <span class="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium">HTML</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="mb-32">
+      <div class="flex justify-between items-end mb-12">
+        <div>
+          <h2 class="text-3xl font-bold mb-2">Projetos Selecionados</h2>
+          <p class="text-gray-500 italic text-sm">// Onde o código encontra a lógica</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div class="glass-card rounded-3xl p-8 group">
+          <div class="w-12 h-12 bg-primary/20 rounded-2xl mb-6 flex items-center justify-center text-primary group-hover:scale-110 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Controle de Finanças</h3>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed">Dashboard analítico para gestão de ativos pessoais com visualização de dados em tempo real.</p>
+          <a href="https://finan-as-lake.vercel.app/" target="_blank" class="text-primary text-xs font-bold tracking-widest hover:underline uppercase">Explorar Projeto ↗</a>
+        </div>
+
+        <div class="glass-card rounded-3xl p-8 group">
+          <div class="w-12 h-12 bg-cyan-500/20 rounded-2xl mb-6 flex items-center justify-center text-cyan-500 group-hover:scale-110 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Neural To-Do</h3>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed">Gerenciador de tarefas minimalista com foco em produtividade máxima e interface limpa.</p>
+          <a href="https://matheus712.github.io/to-do-list/" target="_blank" class="text-cyan-500 text-xs font-bold tracking-widest hover:underline uppercase">Explorar Projeto ↗</a>
+        </div>
+
+        <div class="glass-card rounded-3xl p-8 group">
+          <div class="w-12 h-12 bg-purple-500/20 rounded-2xl mb-6 flex items-center justify-center text-purple-500 group-hover:scale-110 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Jogo da velha</h3>
+          <p class="text-gray-500 text-sm mb-6 leading-relaxed">Um clássico reimaginado. Desafie a lógica em um jogo com design responsivo e fluidez extrema.</p>
+          <a href="https://jogo-da-velha-sable-three.vercel.app" target="_blank" class="text-purple-500 text-xs font-bold tracking-widest hover:underline uppercase">Explorar Projeto ↗</a>
+        </div>
+
+      </div>
+    </section>
+
+    <footer id="contact" class="py-20 border-t border-white/5">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl font-bold mb-6">Vamos codar algo <span class="text-primary">incrível?</span></h2>
+          <p class="text-gray-400 mb-8">Disponível para novos projetos e colaborações em IA.</p>
+          <a href="mailto:matheuscainan0704@gmail.com" class="text-2xl font-light hover:text-primary transition break-all">
+            matheuscainan0704@gmail.com
+          </a>
+        </div>
+        <div class="flex md:justify-end space-x-6 text-gray-500">
+           <a href="https://www.linkedin.com/in/matheus-caina-914b95330/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">LinkedIn</a>
+           <a href="https://github.com/matheus712" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">GitHub</a>
+        </div>
+      </div>
+      <p class="mt-20 text-center text-gray-600 text-sm tracking-widest">
+        &copy; 2026 MATHEUS CAINÃ — SYSTEM_READY
+      </p>
+    </footer>
+  </main>
+
+  <script>
+    // Pequena animação de fade-in ao rolar
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0)";
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.glass-card').forEach(card => {
+      card.style.opacity = "0";
+      card.style.transform = "translateY(20px)";
+      card.style.transition = "all 0.6s ease-out";
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
